@@ -43,8 +43,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 rightNumbers.push(userNum);
             }
         }
+        if (rightNumbers.length > 0) {
+            result.innerHTML = "Hai indovintato " + rightNumbers.length + " numeri, eccoli quali " + rightNumbers;
+            if (rightNumbers.length === 5) {
+                result.innerHTML = "Hai indovintato tutti i numeri " + rightNumbers;
+            }
+        } else {
+            result.innerHTML += "Mi dispiace! Non ne hai indovinato nemmeno uno!"
+        }
         console.log("hai indovintato " + rightNumbers.length + " numeri, eccoli quali " + rightNumbers);
-    }, 2000);
+    }, 30000);
 
 
 
